@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Всё на полу | Укладка ламината и кварцвинила в Казани</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #4a3728;
+    overflow-x: hidden;
+    background: #fefaf5;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f0e6d8;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8B6914, #6B4226);
+    border-radius: 10px;
+}
+
+header {
+    background: rgba(255,252,245,0.95);
+    backdrop-filter: blur(10px);
+    color: #4a3728;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(107, 66, 38, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #8B6914, #6B4226);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.phone a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #8B6914;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.phone a:hover {
+    color: #6B4226;
+}
+
+.hero {
+    background: linear-gradient(135deg, #8B6914 0%, #6B4226 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,215,150,0.15) 0%, transparent 70%);
+    animation: fadeIn 2s ease;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.btn {
+    display: inline-block;
+    background: #6B4226;
+    color: white;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.btn:hover {
+    background: #8B6914;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(107, 66, 38, 0.3);
+}
+
+.services {
+    padding: 80px 20px;
+    background: #fefaf5;
+}
+
+.services h2, .portfolio h2, .reviews h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #4a3728;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #8B6914;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(107, 66, 38, 0.08);
+    text-align: center;
+    transition: all 0.3s;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    border: 1px solid #f0e0cc;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(107, 66, 38, 0.15);
+}
+
+.service-card i {
+    font-size: 55px;
+    background: linear-gradient(135deg, #8B6914, #6B4226);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #4a3728;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.service-card p {
+    color: #7a6250;
+    line-height: 1.8;
+}
+
+.portfolio {
+    padding: 80px 20px;
+    background: white;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.portfolio-item {
+    position: relative;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(107, 66, 38, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(135deg, #c9a56e, #a07a4a);
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(107,66,38,0.9), transparent);
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.statistics {
+    background: linear-gradient(135deg, #8B6914, #6B4226);
+    padding: 60px 20px;
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+.reviews {
+    padding: 80px 20px;
+    background: #fefaf5;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(107, 66, 38, 0.05);
+    transition: 0.3s;
+    border: 1px solid #f0e0cc;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(107, 66, 38, 0.1);
+}
+
+.review-text {
+    font-style: italic;
+    color: #7a6250;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-author i {
+    font-size: 50px;
+    color: #8B6914;
+}
+
+.review-author h4 {
+    color: #4a3728;
+    margin-bottom: 5px;
+}
+
+.review-author p {
+    color: #b8a28a;
+    font-size: 14px;
+}
+
+.cta {
+    background: linear-gradient(135deg, #8B6914 0%, #6B4226 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.form-container {
+    background: white;
+    padding: 45px;
+    border-radius: 25px;
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(107, 66, 38, 0.2);
+}
+
+.form-container h3 {
+    color: #4a3728;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a3728;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #f0e0cc;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: 0.3s;
+    background: #fefaf5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8B6914;
+    box-shadow: 0 0 0 3px rgba(139, 105, 20, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #8B6914, #6B4226);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(139, 105, 20, 0.4);
+}
+
+footer {
+    background: #2c241a;
+    color: #d4c5b5;
+    text-align: center;
+    padding: 30px;
+}
+
+footer a {
+    color: #d4c5b5;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(107,66,38,0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 400px;
+    animation: fadeInUp 0.3s ease;
+}
+
+.modal-content i {
+    font-size: 70px;
+    color: #8B6914;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    color: #4a3728;
+}
+
+.close-modal {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #8B6914;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    background: #6B4226;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .services h2, .portfolio h2, .reviews h2 {
+        font-size: 32px;
+    }
+    .form-container {
+        padding: 25px;
+    }
+    .stat-number {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">ВСЁ НА ПОЛУ</div>
+            <div class="phone">
+                <i class="fas fa-phone-alt"></i> <a href="tel:+79274007215">+7 (927) 400-72-15</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Профессиональная укладка напольных покрытий</h1>
+        <p>Ламинат и кварцвинил высочайшего качества в Казани</p>
+        <button class="btn" onclick="scrollToForm()">
+            <i class="fas fa-calendar-check"></i> Заказать консультацию
+        </button>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        <h2>Наши услуги</h2>
+        <div class="section-subtitle">Качественно, быстро, с гарантией</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Укладка ламината</h3>
+                <p>Профессиональная укладка ламинированных полов любой сложности с гарантией качества до 5 лет</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-gem"></i>
+                <h3>Укладка кварцвинила</h3>
+                <p>Современное покрытие с высокой износостойкостью и влагоустойчивостью — идеально для ванной и кухни</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-ruler-combined"></i>
+                <h3>Подготовка основания</h3>
+                <p>Тщательная подготовка поверхности: стяжка, выравнивание, грунтовка для идеального результата</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio">
+    <div class="container">
+        <h2>Примеры наших работ</h2>
+        <div class="section-subtitle">Реальные объекты в Казани</div>
+        <div class="portfolio-grid">
+            <!-- 1. Укладка ламината -->
+            <div class="portfolio-item">
+                <img src="https://i.ibb.co/FLKqMDBg/yj-Agd-Q3t-X9-SKSosd-Qi-Ittpf72z-WSdk-MHWw-KUdgr-Q52-TCsu-VT0ew66bu-VBHYdg-DH-Nw-Ez7-PMYd-Dspw-Auv-IZ5-P.jpg" alt="Укладка ламината">
+                <div class="portfolio-overlay">Укладка ламината — качество и надежность</div>
+            </div>
+            <!-- 2. Кварцвинил в комнате -->
+            <div class="portfolio-item">
+                <img src="https://i.ibb.co/Dfdrbw70/c-Pgfvcfg5-LGwoj-T7-Nqtu-L9-RK3-Dtt-Gf-Wa-HInl-M805-Sjcjd5p-RXN6-LRlzyjsu-JYe-Q4-QBf-XTo-KQPN9d2-WQ0-Xaqgu.jpg" alt="Кварцвинил в комнате">
+                <div class="portfolio-overlay">Кварцвинил в комнате — стиль и долговечность</div>
+            </div>
+            <!-- 3. Дизайн-проект - укладка 1/3 -->
+            <div class="portfolio-item">
+                <img src="https://i.ibb.co/wrhBfR0w/194bf1a6190cbb2849838998b0637605.jpg" alt="Дизайн-проект укладка 1/3">
+                <div class="portfolio-overlay">Дизайн-проект — укладка 1/3</div>
+            </div>
+            <!-- 4. Крупный план качества -->
+            <div class="portfolio-item">
+                <img src="https://i.ibb.co/7tGvxQ76/160d27dcbde98849c6c91303a8698462.jpg" alt="Качество крупный план">
+                <div class="portfolio-overlay">Крупный план — безупречное качество укладки</div>
+            </div>
+            <!-- 5. НОВОЕ ФОТО: Диагональная укладка -->
+            <div class="portfolio-item">
+                <img src="https://i.ibb.co/7tFr8yrR/5469638120313060941.jpg" alt="Диагональная укладка ламината">
+                <div class="portfolio-overlay">Диагональная укладка — оригинальный дизайн</div>
+            </div>
+            <!-- 6. НОВОЕ ФОТО: Квартира-студия -->
+            <div class="portfolio-item">
+                <img src="https://i.ibb.co/JF85r0y1/t-Si6-HMz-Cl-Bn-Qk-D8-N74w-Ab-D0n-Co-Ov-AMoxc-TG6-EJVWURBicx-Ls8ql-X6v-LLPi-2r-Cl-OW3-KUg-HAQv-Ee-Tr2v-L.jpg" alt="Квартира-студия укладка ламината">
+                <div class="portfolio-overlay">Квартира-студия — уют и современный стиль</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="statistics">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <i class="fas fa-smile"></i>
+                <div class="stat-number">250+</div>
+                <div class="stat-label">Довольных клиентов</div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-home"></i>
+                <div class="stat-number">10 000+</div>
+                <div class="stat-label">м² уложено</div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <div class="stat-number">7 лет</div>
+                <div class="stat-label">на рынке</div>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-trophy"></i>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">гарантия качества</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews">
+    <div class="container">
+        <h2>Отзывы клиентов</h2>
+        <div class="section-subtitle">Что говорят о нас</div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-text">
+                    <i class="fas fa-quote-left"></i> Заказывал укладку ламината в новостройку. Ребята сделали всё быстро и аккуратно. Пол идеальный, без скрипов. Спасибо!
+                </div>
+                <div class="review-author">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                        <h4>Алексей Смирнов</h4>
+                        <p>ул. Чистопольская</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-text">
+                    <i class="fas fa-quote-left"></i> Укладывали кварцвинил на кухню. Очень довольна результатом! Влаги не боится, мыть легко. Мастера вежливые, приехали вовремя.
+                </div>
+                <div class="review-author">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                        <h4>Елена Васильева</h4>
+                        <p>пр. Победы</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-text">
+                    <i class="fas fa-quote-left"></i> Лучшая компания в Казани! Сделали стяжку и укладку за 3 дня. Цена адекватная, рекомендую.
+                </div>
+                <div class="review-author">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                        <h4>Марат Хайруллин</h4>
+                        <p>ЖК «Весна»</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Готовы к переменам?</h2>
+        <p>Оставьте заявку — мы свяжемся с вами в течение часа</p>
+        <div class="form-container">
+            <h3><i class="fas fa-pen-alt"></i> Форма заказа</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Ваше имя</label>
+                    <input type="text" id="name" name="name" required placeholder="Например: Александр">
+                </div>
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Телефон</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form-group">
+                    <label for="address"><i class="fas fa-map-marker-alt"></i> Адрес объекта</label>
+                    <input type="text" id="address" name="address" required placeholder="Улица, дом">
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Описание работ</label>
+                    <textarea id="message" name="message" placeholder="Площадь, тип покрытия, пожелания..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    <i class="fab fa-whatsapp"></i> Отправить заявку в WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ВСЁ НА ПОЛУ. Укладка напольных покрытий в Казани. Все права защищены.</p>
+        <p style="margin-top: 10px; opacity: 0.8;">
+            <i class="fas fa-phone-alt"></i> <a href="tel:+79274007215" style="color: #d4c5b5; text-decoration: none;">+7 (927) 400-72-15</a>
+        </p>
+    </div>
+</footer>
+
+<div id="thankyouModal" class="modal">
+    <div class="modal-content">
+        <i class="fas fa-check-circle"></i>
+        <h3>Спасибо за заявку!</h3>
+        <p>Мы свяжемся с вами в ближайшее время</p>
+        <button class="close-modal" onclick="closeModal()">Отлично</button>
+    </div>
+</div>
+
+<script>
+function scrollToForm() {
+    document.querySelector('.cta').scrollIntoView({ behavior: 'smooth' });
+}
+
+function closeModal() {
+    document.getElementById('thankyouModal').style.display = 'none';
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const message = document.getElementById('message').value;
+    
+    const text = `🏠 Новая заявка с сайта "ВСЁ НА ПОЛУ"\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📍 Адрес: ${address}\n📝 Описание: ${message}`;
+    const whatsappUrl = `https://wa.me/79274007215?text=${encodeURIComponent(text)}`;
+    
+    window.open(whatsappUrl, '_blank');
+    document.getElementById('thankyouModal').style.display = 'flex';
+    this.reset();
+});
+
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .portfolio-item, .review-card, .stat-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
+    observer.observe(el);
+});
+</script>
+</body>
+</html>
